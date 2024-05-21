@@ -9,6 +9,24 @@ app.get('/', (req, res) => {
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
+let count = 0;
+const max = 10; //최대 예약 가능 객실수
+const reservations = [
+  {
+    id: count++,
+    name: '홍길동',
+    phone: '01012345678',
+    account: {
+      bank: '광주은행',
+      number: '1000-2000-101-3',
+      owner: '홍길동'
+    },
+    datetime: '2024-05-25T09:00:00.000Z',
+    total: 4
+
+  }
+]
+
 app.get('/search', (req, res) => {
   res.send('<h1>Hello Search World!</h1>')
 })
@@ -30,7 +48,7 @@ app.post('/signin', (req, res) => {
   }
   return res.redirect('/'); //로그인 성공하면 메인페이지 이동
 })
-app.post('/signup', (req, res) => {
+app.post('create', (req, res) => {
   //DB 연결: Oracle, MySQL, MognDB, Firebase, ..etc
   //const dbconn = mysql.connect('localhost:3000/users');
 
