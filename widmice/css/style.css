@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+html {
+    font-size: 20px;
+}
+body {
+    font-family: "Montserrat", "Noto Sans KR", sans-serif;
+    font-size: .8rem;
+}
+/* h1 {
+    font-size: 1.5rem; /* root element : 부모/조상 요소 */
+
+
+/* design class */
+.container {
+    max-width: 1320px;
+}
+.container-fluid {
+    width: 100%;
+}
+.mx-auto {
+    margin: 0 auto;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.d-flex {
+    display: flex;
+}
+.fs-1 {
+    font-size: 1.6rem;
+}
+.fs-6 {
+    font-size: .65rem;
+}
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.gap-1 {
+    gap: 1rem;
+}
+.gap-2 {
+    gap: 2rem;
+}
+.gap-3 {
+    gap: 3rem;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.fw-bold {
+    font-weight: 600;
+}
+.fw-bolder {
+    font-weight: 900;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-lowercase {
+    text-transform: lowercase;
+}
+.text-center {
+    text-align: center;
+}
+.items-center {
+    align-items: center;
+}
+#gnb li, .links {
+    color: #ffffff;
+}
+#gnb li a:hover {
+    color: #58c8f6
+}
+.bg-header {
+    opacity: 0.3;
+    background-color: #000000;
+}
+.position-absolute {
+    position: absolute;
+}
+.img-fluid {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+
+.balloon {
+    left: 100px;
+    top: 100px;
+}
+.slogan {
+    left: 550px;
+    top: 350px;
+}
+.co-contents {
+    background-image: url("../images/coleftbg.jpg");
+}
