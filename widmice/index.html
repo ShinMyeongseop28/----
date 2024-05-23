@@ -24,7 +24,7 @@
                 </div>
                 <nav><!--Global Navigation Bar-->
                     <ul id="gnb" class="d-flex gap-3 fw-bold text-uppercase">
-                        <li><a href="#">company</a></li>
+                        <li><a href="#company">company</a></li>
                         <li><a href="#">business area</a></li>
                         <li><a href="#">portfolio</a></li>
                         <li><a href="#">contact us</a></li>
@@ -51,31 +51,61 @@
     <main>
         <article>
             <div class="container mx-auto my-2">
-                <h2 class="text-uppercase text-center">company</h2>
+                <h2 id="company" class="text-uppercase text-center">company</h2>
             </div>
-            <div class="co-contents">
-                <div class="co-left">
-                    <img src="images/coleftbg.jpg" alt="">
-                </div>
-                <div class="co-center">
+            <div class="co-contents w1000 mx-auto">
+                <div class="co-flight">
                     <img src="images/co_img.png" alt="">
                 </div>
                 <div class="co-text">
-                    위드마이스는 어쩌구... 
-                </div>
-                <div class="co-right">
-                    <img src="images/corightbg.jpg" alt="">
+                    <strong class="fs-2">위드마이스는</strong> <br>Meeting, Incentive, Convention, Exhibition 등
+                    각 분야의 전문가들이 모인 MICE 기업으로써 매번
+                    업데이트 된 프로그램으로 고객들에게 품격 있는 서비스를
+                    제공하고 있습니다.
                 </div>
             </div>
         </article>
-        <article>
-            <div class="container mx-auto my-2">
-                <h2 class="text-uppercase text-center">business</h2>
+        <article class="bg-meeting">
+            <div class="container w1000 mx-auto pb-5">
+                <h2 class="text-uppercase text-center pt-5">business</h2>
+                <ul class="d-flex w1000 mx-auto justify-between">
+                    <li class="position-relative">
+                        <img src="images/busimg1.jpg" alt="flight & hotel">
+                        <p class="position-absolute pos-bottom text-capitalize">flight &amp; Hotel</p>
+                    </li>
+                    <li class="position-relative">
+                        <img src="images/busimg2.jpg" alt="convention">
+                        <p class="position-absolute pos-bottom text-capitalize">converntion</p>
+                    </li>
+                    <li class="position-relative">
+                        <img src="images/busimg3.jpg" alt="promotion">
+                        <p class="position-absolute pos-bottom text-capitalize">promotion</p>
+                    </li>
+                </ul>
             </div>
         </article>
     </main>
-    <aside></aside>
-    <footer></footer>
+    <aside>
+        <div class="class d-flex justify-center position-relative half-up">
+            <a href="#"><img src="images/btn_top.png" alt="맨 위로"></a>
+        </div>
+    </aside>
+    <footer>
+        <div class="container w1000 mx-auto d-flex justify-between">
+            <div class="site-brand">
+                <a href="#">
+                    <img src="images/footer_logo.png" alt="위드마이스">
+                </a>
+            </div>
+            <!-- /.site-brand -->
+            <div class="site-info">
+                <p>(주)위드마이스 대표자 : 강정환, 이윤아 주소 : 아직 구하지 못했음 고객센터 : 062-1234-5678 개인정보관리책임자 : 할사람 손들어봐요</p>
+                <p>COPYRIGHT(C) WID MICE ALL RIGHTS RESERVED.</p>
+            </div>
+            <!-- /.site-info -->
+        </div>
+        <!-- /.container w1000 mx-auto d-flex justify-between -->
+    </footer>
 </body>
 
 </html>

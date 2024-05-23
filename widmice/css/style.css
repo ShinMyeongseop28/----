@@ -2,6 +2,7 @@
 
 html {
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 body {
     font-family: "Montserrat", "Noto Sans KR", sans-serif;
@@ -28,7 +29,10 @@ body {
     display: flex;
 }
 .fs-1 {
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* 32px */
+}
+.fs-2 {
+    font-size: 1.5rem; /* 30px */
 }
 .fs-6 {
     font-size: .65rem;
@@ -44,6 +48,15 @@ body {
 .py-1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+.pt-1 {
+    padding-top: 1rem;
+}
+.pt-5 {
+    padding-top: 5rem;
+}
+.pb-5 {
+    padding-bottom: 5rem;
 }
 .gap-1 {
     gap: 1rem;
@@ -72,6 +85,9 @@ body {
 .text-lowercase {
     text-transform: lowercase;
 }
+.text-capitalize {
+    text-transform: capitalize;
+}
 .text-center {
     text-align: center;
 }
@@ -91,6 +107,19 @@ body {
 .position-absolute {
     position: absolute;
 }
+.position-relative {
+    position: relative;
+}
+.pos-bottom {
+    font-size: 1rem;
+    color: #ffffff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
 .img-fluid {
     max-width: 100%;
     object-fit: cover;
@@ -106,6 +135,37 @@ body {
     left: 550px;
     top: 350px;
 }
+.w1000 {
+    width: 1000px;
+}
 .co-contents {
-    background-image: url("../images/coleftbg.jpg");
+    height: 515px; /* default: auto */
+    background-image: url("../images/corightbg.jpg"), url("../images/coleftbg.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 500px 0, 0 0;
+    position: relative;
+}
+.co-flight {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%); /* 마진으로 땡기는건 옛날 방식 */
+}
+.co-text {
+    position: absolute;
+    width: 40%;
+    left: 55%;
+    top: 40%;
+    font-size: .8rem;
+    letter-spacing: -1px;
+    line-height: 1.5; /* 글자 위아래 띄기 */
+}
+
+.bg-meeting {
+    background: #ffffff url("../images/bus_bg.jpg") no-repeat center / cover;
+    min-height: 500px;
+}
+
+.half-up {
+    top: -27px;
 }
