@@ -1,0 +1,46 @@
+@charset "utf-8";
+html {
+    font-size: 20px;
+}
+body {
+    font-family: "Moven Pro", "Noto Sans KR", sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: 1.5; /* 1.4에서 1.6 사이 */
+
+    /* background처럼 축약 */
+    /* font:normal .7rem / 1.5 400 "Moven Pro", "Noto Sans KR", sans-serif; */
+}
+
+/* site_main */
+.float-header {
+    width: 1320px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+}
+.bg-hero {
+    background: url(../images/visual_bg.jpg) no-repeat center / cover;
+    min-height: 950px;
+}
+.slogan-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.bg-wave {
+    background: url(../images/system_bg.jpg) no-repeat center / cover;
+}
+.bg-water {
+    background-color: #1e598c
+}
+.eng-title {
+    padding-top: 2px;
+}
+bg-bubble {
+    background: url(../images/product_bg.gif) no-repeat center / cover;
+}
+.over-img:hover {
+    opacity: .5;
+}
