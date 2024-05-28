@@ -84,13 +84,59 @@
             </div>
         </article>
         <article>
-            <div class="container-fluid py-4 bg-bubble mt-5">
+            <div class="container-fluid py-4 bg-bubble mt-5 position-relative">
                 <h2 class="text-center">생산제품</h2>
                 <h3 class="text-center">2015년 신제품 지능형 텔레모스 시스템!</h3>
                 <div class="product d-flex align-items-center flex-column w600 mx-auto">
                     <img src="images/product.png" alt="">
-                    <button type="button" class="btn btn-outline-secondary rounded-pill fs-7 w120 ">자세히보기</button>
+                    <button type="button" id="detail"
+                        class="btn btn-outline-secondary rounded-pill fs-7 w120 ">자세히보기</button>
                 </div>
+                <div id="product_detail" class="bg-white position-absolute d-none">
+                    <div class="container mx-auto h-100 align-items-center">
+                        <div class="row position-relative">
+                            <div class="youtube overflow-hidden col d-flex">
+                                <iframe class="object-fit-cover img-fluid" width="1280" height="720"
+                                    src="https://www.youtube.com/embed/oRiMBxP75fY"
+                                    title="AloT 기반 스마트 재난안전관리시스템 구축"></iframe>
+                            </div>
+                            <div class="info col">
+                                <div class="staff">
+                                    <h3>담당자</h3>
+                                    <hr>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-3">아이콘</div>
+                                            <div class="col-3">홍길동</div>
+                                            <div class="col-6 lh-1">
+                                                <p>내선번호 : 100</p>
+                                                <p>휴대폰 : 010-1234-5678</p>
+                                                <p>이메일 : gildong@hanmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div class="row">
+                                        <div class="col-6 mb-3"><button type="button"
+                                                class="w-100 py-2 border-0 rounded-pill">특허/인증</button></div>
+                                        <div class="col-6"><button type="button"
+                                                class="w-100 py-2 border-0 rounded-pill">카탈로그</button></div>
+                                        <div class="col-6"><button type="button"
+                                                class="w-100 py-2 border-0 rounded-pill">견적요청</button></div>
+                                        <div class="col-6"><button type="button"
+                                                class="w-100 py-2 border-0 rounded-pill">A/S요청</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="closer" type="button"
+                                class="position-absolute bg-dark text-white">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <!--1. a 태그 img 삽입 : 버튼 (역할)
+                    2. input:button, input:submit
+                    3. button 태그 (type따라서 다르게 동작) -->
             </div>
         </article>
     </main>

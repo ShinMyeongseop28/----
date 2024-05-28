@@ -63,9 +63,9 @@ bg-bubble {
 .w120 {
     width: 120px;
 }
-.product {
+/* .product {
     height: 442px;
-}
+} */
 
 .bg-aside {
     background: url(../images/company.png), url(../images/company_bg.jpg);
@@ -75,4 +75,32 @@ bg-bubble {
 }
 .pt-8 {
     padding-top: 8rem;
+}
+
+#product_detail {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.youtube {
+    min-height: 360px;
+}
+#closer {
+    right: 0%;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+
+}
+.h-100 {
+    height: 100%;
+}
+.h100 {
+    height: 100px;
+}
+button[type=button]:hover {
+    color: black;
+    border: 2px solid black !important;
 }
