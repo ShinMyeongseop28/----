@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+    <style>
+        .box-container {
+            display: flex;
+            gap: 1rem;
+        }
+        .box {
+            border: 1px solid gray;
+            padding: 1rem;
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>구구단 출력기</h1>
+    <p>Q1. 출력하고자 하는 구구단 수를 입력받고, 그에따른 구구단을 출력하는 프로그램</p>
+    <p>Q2. 구구단을 몇단까지 출력할지를 입력받고, 그에따른            ""            </p>
+    <script>
+        let dan = prompt("구구단을 몇단까지 출력할까요?", "예) 2부터 9까지 숫자중 하나 입력")
+        document.write("<h2>구구단</h2>")
+        document.write("<div class = 'box-container'>")
+        for(let i = 2; i <= dan; i++) {
+            dan % 2 == 0 ? document.write("<div class = 'box'>") : document.write("<div class = 'box'>")
+            for(let j = 1; j <= 10; j++) {
+                document.write(`<p>${i} x ${j} = ${i * j}</p>`)
+            }
+        }
+
+        
+        // let dan = prompt("몇단 구구단을 출력할까요?", "예) 2단을 원하면 2라고 입력하세요!")
+        // let sum = 0;
+        // for(let i = 1; i < 10; i++) {
+        //     sum += dan * i;
+        //     document.write(`<p>${dan} x ${i} = ${dan * i}</p>`);
+        // }
+        document.write("<p>구구단" + dan + "단의 합계 : " + sum + "</p>");
+    </script>
+</body>
+</html>
