@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼을 클릭해서 상세설명 보기/닫기</title>
+    <style>
+        .hide {
+            display: none;
+        }
+        .border {
+            border: 1px solid gray;
+        }
+        .flower_bg {
+            background: url("https://picsum.photos/id/82/1920/1080") no-repeat center / cover;
+            min-height: 200px;
+            position: relative;
+        }
+        .flower_bg button {
+            position: absolute;
+            bottom: 5%;
+            left: 3%;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .d-flex {
+            display: flex;
+        }
+        #modal {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,.3);
+            z-index: 100;
+        }
+        .modal_body {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bg-white {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>p.544 함수/이벤트 실습</h1>
+    <div id="modal">
+        <div class="modal_body">
+            <div class="photo_container d-flex">
+                <div class="photo">
+                    <img src="https://picsum.photos/id/1/240/320" alt="1">
+                </div>
+                <div class="photo">
+                    <img src="https://picsum.photos/id/10/240/320" alt="10">
+                </div>
+                <div class="photo">
+                    <img src="https://picsum.photos/id/100/240/320" alt="100">
+                </div>
+                <div class="photo">
+                    <img src="https://picsum.photos/id/1000/240/320" alt="1000">
+                </div>
+            </div>
+            <div class="controls bg-white">
+                <label for=""><input type="checkbox" class="day_off"> 하루동안 보지않기</label>
+                <button class="stop">
+                    일시정지
+                </button>
+                <button class="close_modal">
+                    <!--&times;--> 닫기
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="flower_bg border">
+            <!-- 배경사진 : 민들레, 찔레꽃, 등심붓꽃.. 등등 -->
+            <button class="show_btn">보기</button><!-- 클릭 이벤트가 발생하는지 지켜봐야하는 대상-->
+        </div>
+        <div id="desc" class="hide">
+            <h2>등심붓꽃</h2>
+            <p>북아메리카 원산으로 각지에서 관상초로 흔히 심고 있는 귀화식물이다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugit vitae qui nisi quia ut labore maxime minus, voluptatum est velit aliquid minima aliquam non accusamus accusantium, aspernatur dolor earum.</p>
+            <button class="hide_btn">상세 설명 닫기</button><!-- 클릭 이벤트가 발생하는지 지켜봐야하는 대상 -->
+        </div><!--조작의 대상-->
+    </div>
+
+    <script>
+        const hideBt = document.querySelector(".hide_btn");
+        const showBt = document.querySelector(".show_btn");
+        const desc = document.querySelector("#desc");
+        const closeBt = document.querySelector(".close_modal")
+        const modalDiv = document.querySelector("#modal")
+        hideBt.addEventListener("click", hideDesc);
+        function hideDesc(){
+            // desc.style.display = "none";
+            showBt.classList.remove("hide");
+            desc.classList.add("hide");
+        }
+        showBt.addEventListener("click", showDesc);
+        function showDesc(){
+            showBt.classList.add("hide");
+            desc.classList.remove("hide");
+        }
+        closeBt.addEventListener("click", hideModal);
+        function hideModal(){
+            modalDiv.classList.add("hide");
+        }
+    </script>
+</body>
+</html>
