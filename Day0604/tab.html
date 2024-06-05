@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭 메뉴</title>
+    <style>
+        body {
+            background: lightgray;
+        }
+        .tabs {
+            width: 500px;
+            /* height: 420px; */
+            padding: 80px;
+            background: white;
+            border-radius: 3rem;
+            box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .3);
+        }
+        button {
+            background: white;
+            border: 0;
+            font-size: 1.250rem;
+            text-transform: uppercase;
+            color: gray;
+            padding: 1rem;
+        }
+        /*button*/.active {
+            border-bottom: 3px solid deepskyblue;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab_btn">
+            <button id="code_bt" class="active">code</button>
+            <button id="about_bt">about</button>
+        </div>
+        <div class="tab_box">
+            <div id="code_tab">
+                <h2>This is code section</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sunt quaerat in ad ea, quas reprehenderit recusandae quis consequatur, dolor voluptatum rerum laudantium amet. Obcaecati, magnam? Provident qui nisi ab cum, tempore consectetur necessitatibus error adipisci voluptas itaque autem corporis maxime. Rem magni odit culpa aut, aliquam quo. Unde, possimus.</p>
+            </div>
+            <div id="about_tab" class="hide">
+                <h2>This is about section</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste odio esse, excepturi alias sapiente, blanditiis nisi maxime exercitationem vel quasi expedita rerum ad fugiat veritatis, laborum error asperiores magni quia modi eum voluptatem tempore eveniet dolor. Repudiandae architecto, accusantium, maiores, doloremque quos ut consequuntur animi veniam harum in libero quae.</p>
+            </div>
+        </div>
+        <script>
+            // about 누르면 할일
+            // 1.about을 지정
+            const aboutBt = document.querySelector("#about_bt");
+            const codeBt = document.querySelector("#code_bt")
+            const aboutTab = document.querySelector("#about_tab");
+            const codeTab = document.querySelector("#code_tab");
+
+            // 2. 이벤트 리스너 추가
+            aboutBt.addEventListener("click", function(){
+                // 2-1. active 클래스를 추가
+                this.classList.add("active")
+                codeBt.classList.remove("active")
+                // 2-2. hide 클래스를 추가/제거
+                codeTab.classList.add("hide")
+                aboutTab.classList.remove("hide")
+            })
+            codeBt.addEventListener("click", function(){
+                // 2-1. active 클래스를 추가
+                this.classList.add("active")
+                aboutBt.classList.remove("active")
+                // 2-2. hide 클래스를 추가/제거
+                aboutTab.classList.add("hide")
+                codeTab.classList.remove("hide")
+            })
+            function changeBt(){
+
+            }
+            function changeBox(){
+
+            }
+        </script>
+    </div>
+</body>
+</html>
