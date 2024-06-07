@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 오브젝트</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        #popup {
+            background: rgba(0, 0, 0, .3);
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+        }
+        .popup_body{
+            position: absolute;
+            background: yellowgreen;
+            color: white;
+            padding: 2rem;
+            width: 400px;
+            height: 360px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>내장 객체 : BOM</h1>
+    <p>자바스크립트는 크게 세가지 파트 즉, 첫번째! Core, 두번째 DOM 그리고 세번째 
+        BOM(Browser Object Model)로 구성되어 있습니다.</p>
+    <h2>브라우저와 관련된 객체(p.576)</h2>
+    <h3>브라우저 창을 열기/닫기</h3>
+    <div id="popup" class="hidden">
+        <div class="popup_body">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, blanditiis voluptatibus. Dignissimos eius quis omnis nostrum ducimus aliquid eaque asperiores.</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            
+            <button class="closer">레이어 닫기</button>
+        </div> 
+    </div>
+    <button class="opener">레이어 열기</button>
+    <!-- <script>
+        /* 옛날방식
+        const opener = document.querySelector("button"); // button 태그를 선택한다.
+        opener.addEventListener("click", openLayer);
+        function openLayer(){
+            // 팝업차단 설정되어 있다면, 결과를 볼 수 없음...
+            // 중요한 소식, 이벤트 ==> 사용자가 모르고 지나칠수 있음
+            window.open("http://www.naver.com","naverPop","width=600,height=400,scrollbars=yes")
+        }
+        */
+
+       const opener = document.querySelector(".opener"); // button 태그를 선택한다.
+       const closer = document.querySelector("button"); // button 태그를 선택한다.
+       const POPUP = document.querySelector("#popup");
+
+       // Q.닫기 버튼이 아닌 창 전체(빈곳)를 클릭했을때 닫게 하려면??
+       //window.addEventListener("click",closePopup);
+       
+       opener.addEventListener("click", openPopup);
+       closer.addEventListener("click", closePopup);
+       function openPopup(){
+            POPUP.classList.remove("hidden");
+       }
+       function closePopup(){
+            POPUP.classList.add("hidden");
+       }
+    </script> -->
+    <script src="main.js"></script>
+</body>
+</html>
